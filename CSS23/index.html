@@ -20,15 +20,23 @@
             width: 350px;
             height: 80px;
             background-color: blue;
-            border: 5px solid yellow;
+            border: 3px solid yellow;
             border-radius: 10px;
             margin: 10px;
             position: relative;
-            animation-name: rightMovement;
+            /* animation-name: rightMovement;
             animation-duration: 5s;
-            animation-iteration-count: 2;
-            animation-delay: 1s;
-            animation-timing-function: ease-in;
+            animation-iteration-count: 1; */
+            /* animation-delay: 1s; */
+            /* animation-timing-function: linear; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-fill-mode: forwards; */
+
+            /* @keyframes duration | easing-function | delay |
+            iteration-count | direction | fill-mode | play-state | name */
+            animation: 5s linear 1s infinite alternate none running rightMovement;
+
+
 
         }
         @keyframes rightMovement {
@@ -39,9 +47,72 @@
 
             to{
                 top: 0;
-                left: 1200px;
+                left: 1350px;
             }
         }
+
+        #box2{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 3px solid yellow;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            animation: 5s ease-in 1s infinite alternate none running leftMovement;
+        }
+
+    
+        @keyframes leftMovement {
+            from{
+                top: 650px;
+                left: 1350px;
+            }
+
+            to{
+                top: 680;
+                left: 0px;
+            }
+        }
+
+        #circle {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 3px solid yellow;
+            border-radius: 50px;
+            margin: 10px;
+            position: relative;
+            top: 30%;
+            left: 40%;
+            animation: 10s ease-in-out 0s infinite alternate-reverse none running circleMovement;
+
+        }
+
+        @keyframes circleMovement{
+            0%{
+                top: 1%;
+                left: 5%;
+            }
+
+              30%{
+                top: 1%;
+                left: 90%;
+               }
+
+              60% {
+                top: 70%;
+                left: 10%;
+
+               }
+
+            100%{
+
+                top: 75%;
+                left: 90%;
+
+            }
+          }
     </style>
 </head>
 <body>
@@ -49,6 +120,16 @@
         <div class="box">
 
         </div>
+
+        <div id="circle">
+
+        </div>
+
+        <div id="box2">
+
+        </div>
+
+       
     </div>
 </body>
 </html>
